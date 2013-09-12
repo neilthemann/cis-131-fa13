@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script type="text/javascript">
+    
+    window.onload = function(){
+        
+        
+        
+        var colorSelected = false;
+        do {
+            
+            // prompt the user for a color, set to empty if the user selects cancel
+            var color = prompt("Type In A Color(Red, White, or Blue):");
+            if (color == null){
+                color = "";
+            }
+            // "reflect back to the user the selected choice"
+            switch (color.toUpperCase()){
+                case "RED":
+                    alert("You Selected Red!");
+                    document.body.style.background = "red";
+                    colorSelected = true;
+                    break;
+                case "WHITE":
+                    alert("You Selected White!");
+                    document.body.style.background = "white";
+                    colorSelected = true;
+                    break;
+                case "BLUE":
+                    alert("You Selected Blue!");
+                    document.body.style.background = "blue";
+                    colorSelected = true;
+                    break;
+                case "":
+                    alert("Please Enter a Color");
+                    break;
+                default:
+                    alert("Please Enter Red, White, or Blue");
+            }
+        } while(colorSelected == false); // loop until the user types in red, white, or blue
+    }    
+    </script>
+</head>
+<body>
+</body>
+</html>
