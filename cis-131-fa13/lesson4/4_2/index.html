@@ -1,1 +1,27 @@
+<html>
+<head>
+    <script type="text/javascript">
+    
+        function whileTest(){
+            var number = 7;
+            var answer = 0;
+            var guesses = 1;
+            
+            while (number != answer && guesses <= 3){
+                answer = prompt("Guess A Number Between 1 and 10");
+                guesses++;
+            }
+            alert((number == answer ? "You Guessed Correctly!" : "You Are Out Of Guesses"));
+            
+        }
+        // run the while test function when the page loads
+        window.onload = function(){
+            whileTest();
+        }
+        
+    </script>
+</head>
+<body>
 <p>Hello World!!</p>
+</body>
+</html>
