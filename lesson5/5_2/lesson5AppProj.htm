@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8">
+<title>Lesson 5 Application Project</title>
+
+<script language="JavaScript" type="text/javascript">
+
+
+    function display_image(selectedImage) {
+  
+        var selectionName = selectedImage.options[selectedImage.selectedIndex].text;
+        var selection = selectedImage.options[selectedImage.selectedIndex].value;
+        
+        //alert (selectionName + " " + selection);
+        
+        newPageHtml = "<!DOCTYPE HTML><html><head><title>Spiffy image of a " + selectionName + "</title></head><body>\
+            <h3>You have slected an image of a " + selectionName + "!</h3>\
+            <img src='" + selection + ".jpg' alt='" + selectionName + "' />\
+            <button type='button' onclick='javasctipt:window.close()'>Close Window</button>\
+            </body></html>";
+            
+        newwindow=window.open('','','height=500,width=425');
+        newdocument=newwindow.document;
+        newdocument.write(newPageHtml);
+        newdocument.close();
+        
+        //alert(newPageHtml);
+        
+        selectedImage.selectedIndex = 0;
+        
+    }
+    
+</script>
+</head>
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<p>
+Select an image:
+</p>
+<select name="images" onchange="display_image(this)">
+    <option value="">--Choose One--</option>
+	<option value="tree">Tree</option>
+    <option value="truck">Truck</option>
+    <option value="building">Building</option>
+</select>
+
+
+</body>
+
+<!-- Neil Mann - CIS-131-W01 - Fall 2013 -->
+
+</html>
