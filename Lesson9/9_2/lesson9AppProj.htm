@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Lesson 9 Application Project</title>
+
+<script type="text/javascript">
+    function setCookie (){
+        //alert ("test");
+        var username = document.getElementById("userName").value;
+        if (username === ""){
+            // text field is empty
+            alert ("Please Enter Your Name");
+        } else {
+            //alert (username);
+            // create cookie with user's name
+            document.cookie = 'name= ' + username;
+            alert ("Cookie set!");
+        }
+    }
+    
+    window.onload = function() {
+        // delete cookie on load
+        document.cookie = 'name= ; expires=Sat, 05 Nov 1955 01:21:00 UTC;';
+        // create new window with the user's name
+        document.getElementById("popup").onclick = function() {
+            var checkCookie = readCookie("name");
+            if (checkCookie !== null){
+                var usersname = readCookie("name");
+                var popupWindow=window.open('','','width=200,height=10,top=350,left=350');
+                popupWindow.document.write("<p>Welcome " + usersname + "!</p>");
+                popupWindow.focus();
+            } else {
+                alert ("Please submit your name first");
+            }
+        }
+    }
+    
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+</script>
+
+</head>
+<body>
+    <form id="submissionForm" onsubmit="setCookie();return false;">
+    <p>
+        Please enter your name:
+        <br />
+        <input type="text" id="userName" name="userName" />
+    </p>
+        <input type="submit" value="Submit" />
+        <input type="button" value="Open New Window" id="popup" name="popup" />
+    </form>
+</body>
+</html>
