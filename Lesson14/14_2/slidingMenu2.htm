@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <title>Lesson 14 Sliding Menu</title>
+        <script type='text/javascript'>
+            $(document).ready(function(){
+                //alert("test");
+                $("#about").mouseover(function(){
+                    $("#about").animate(
+                    {"top": "0px"},
+                    "fast");
+                });
+                $("#about").mouseout(function(){
+                    $("#about").animate(
+                    {"top": "56px"},
+                    "fast");
+                });
+                $("#work").mouseover(function(){
+                    $("#work").animate(
+                    {"top": "0px"},
+                    "fast");
+                });
+                $("#work").mouseout(function(){
+                    $("#work").animate(
+                    {"top": "56px"},
+                    "fast");
+                });
+                $("#help").mouseover(function(){
+                    $("#help").animate(
+                    {"top": "0px"},
+                    "fast");
+                });
+                $("#help").mouseout(function(){
+                    $("#help").animate(
+                    {"top": "56px"},
+                    "fast");
+                });
+                $("#search").mouseover(function(){
+                    $("#search").animate(
+                    {"top": "0px"},
+                    "fast");
+                });
+                $("#search").mouseout(function(){
+                    $("#search").animate(
+                    {"top": "56px"},
+                    "fast");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="navigation" class="navigation">
+            <ul>
+                <li id="about">About<br /><p>Learn about us and our services</p></li>
+                <li id="work">Work<br /><p>See our work and portfolio</p></li>
+                <li id="help">Help<br /><p>Talk to our support</p></li>
+                <li id="search">Search<br /><p>Search our site<br />&nbsp;</p></li>
+            </ul>
+        </div>
+        <div id="content" class="content">
+            <h2>Lorem Ipsum Dolor Sit Amet</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis orci et congue. Curabitur molestie dignissim urna, 
+            in imperdiet dolor placerat in. Cras vitae varius massa, eu euismod diam. Aliquam quis blandit lorem. Etiam sed tempor orci, sed consequat ante. 
+            Duis sit amet odio ut magna scelerisque volutpat sit amet quis nulla. Phasellus sit amet pulvinar nisi, non euismod ligula.
+            </p>
+
+            <p>Quisque dapibus vel dui vel tristique. Duis porta est eu nisi tristique aliquam. Aliquam posuere pulvinar tristique. Proin purus odio, tincidunt eu nulla a, 
+            consectetur euismod neque. Nullam mollis imperdiet nisl ac posuere. Fusce ac tristique nisi, vel sagittis erat. Nullam a eros venenatis diam pretium volutpat. 
+            Nulla vel pellentesque enim, sed interdum est. Etiam scelerisque erat orci, ac luctus turpis accumsan non. Vivamus ante nibh, venenatis vitae mi in, faucibus tristique risus. 
+            Integer blandit nisi adipiscing, auctor eros sit amet, malesuada metus. Fusce pharetra, sem id ultricies aliquet, nunc elit facilisis lectus, sed dignissim magna felis lacinia massa. Nam at sodales eros. Duis sapien tellus, tristique sed fringilla eu, suscipit vitae purus.
+            </p>
+
+            <p>Mauris elementum ligula sed augue eleifend suscipit. In at accumsan magna. Donec a tincidunt velit. Fusce eget faucibus risus. 
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis elementum enim. Fusce non orci eu ipsum congue molestie. 
+            Duis id enim ultricies, fringilla ante non, tristique tellus. Donec nec bibendum lacus. Duis vitae pretium velit, et ultrices quam. Duis in congue tortor, 
+            vitae mollis ipsum. Quisque a convallis sapien.
+            </p>
+        </div>
+    </body>
+</html>
