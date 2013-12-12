@@ -1,0 +1,47 @@
+body{
+    background-color:#F2F2F2;
+    color:#1C1C1C;
+}
+li{
+    list-style-type: none;
+}
+a:link{
+    color:#1C1C1C;
+}
+
+a:visited{
+    color:#A4A4A4;
+}
+
+#navigation{
+    text-decoration:none;
+    width:100px;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+#navigation ul{
+    margin:0;
+    padding:0;
+}
+
+.nav{
+    border:2px solid;
+    border-radius:8px;
+    text-align:center;
+    margin:2px;
+    padding:2px;
+}
+
+#navigation a{
+    text-decoration:none;
+}
+
+#content{
+    position:absolute;
+    left:160px;
+    top:20px;
+}
+
+/* This is why I am a web developer and not a web designer */
